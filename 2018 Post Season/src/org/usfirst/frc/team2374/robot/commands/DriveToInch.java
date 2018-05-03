@@ -6,12 +6,13 @@ import org.usfirst.frc.team2374.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class Drive extends Command {
+public class DriveToInch extends Command {
 
 	protected double distance;
 	
 	
-	public Drive(double distance) {
+	public DriveToInch(double distance) {
+		//distance is inches
 		this.distance = distance;
 	}
 	

@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2374.robot.autonomous;
 
 import org.usfirst.frc.team2374.robot.Robot;
+import org.usfirst.frc.team2374.robot.commands.DriveToInch;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
@@ -9,11 +10,13 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
  * the robot move in a straight line.
  */
 
-public class Direct extends CommandGroup {
+public class DriveStraight extends CommandGroup {
 
-	public Direct() {
+	public DriveStraight() {
 		
 		requires(Robot.drive);
+		
+		addSequential(new DriveToInch(80));
 		
 	}
 	
